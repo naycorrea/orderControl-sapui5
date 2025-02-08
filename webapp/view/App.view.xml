@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="sapui5.project.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell appWidthLimited="false">
+        <App id="app" />
+    </Shell>
+</mvc:View>
