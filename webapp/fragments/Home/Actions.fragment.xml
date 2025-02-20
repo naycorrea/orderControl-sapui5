@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <FlexBox>
+        <Button
+            text=""
+            icon="sap-icon://edit"
+            type="Transparent"
+            tooltip="Edit"
+            press=".onPress"
+            class="sapUiSmallMarginEnd"
+            enabled="{=${reportTableModel>status} === 'Pending' || ${reportTableModel>status} === 'Processing' ? true : false }"
+        />
+        <Button
+            text=""
+            icon="sap-icon://delete"
+            type="Transparent"
+            press=".onDeleteItem"
+            class="sapUiSmallMarginEnd"
+            enabled="{=${reportTableModel>status} === 'Pending' || ${reportTableModel>status} === 'Processing' ? true : false }"
+        />
+        <Button
+            text=""
+            icon="sap-icon://display"
+            type="Transparent"
+            tooltip="Details"
+            press=".onNavToDetails"
+        />
+    </FlexBox>
+</core:FragmentDefinition>

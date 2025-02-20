@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "key": 0,
+      "status": "Pending"
+    },
+    {
+      "key": 1,
+      "status": "Processing"
+    },
+    {
+      "key": 2,
+      "status": "Shipped"
+    },
+    {
+      "key": 3,
+      "status": "Delivered"
+    },
+    {
+      "key": 4,
+      "status": "Canceled"
+    }
+  ]
+}

@@ -5,8 +5,16 @@ sap.ui.define(
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/Fragment",
     "sap/m/MessageBox",
+    "sap/ui/core/BusyIndicator",
   ],
-  function (Controller, UIComponent, JSONModel, Fragment, MessageBox) {
+  function (
+    Controller,
+    UIComponent,
+    JSONModel,
+    Fragment,
+    MessageBox,
+    BusyIndicator
+  ) {
     "use strict";
 
     return Controller.extend("sapui5.project.controller.Base", {
@@ -66,6 +74,10 @@ sap.ui.define(
 
       messageBox(type, message) {
         MessageBox[type](this.getI18nText(message));
+      },
+
+      isLoading(show) {
+        return show ? BusyIndicator.show(0) : BusyIndicator.hide();
       },
     });
   }

@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Toolbar>
+        <ToolbarSpacer />
+        <content>
+            <Button icon="sap-icon://navigation-left-arrow" />
+            <Input
+                width="50px"
+                value="0"
+            />
+            <Text text="of 0" />
+            <Button icon="sap-icon://navigation-right-arrow" />
+        </content>
+    </Toolbar>
+</core:FragmentDefinition>

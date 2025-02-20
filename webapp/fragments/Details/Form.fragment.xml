@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+>
+    <f:SimpleForm
+        id="SimpleFormDetails"
+        editable="false"
+        layout="ResponsiveGridLayout"
+        title=""
+        labelSpanXL="4"
+        labelSpanL="3"
+        labelSpanM="4"
+        labelSpanS="12"
+        adjustLabelSpan="false"
+        emptySpanXL="0"
+        emptySpanL="4"
+        emptySpanM="0"
+        emptySpanS="0"
+        columnsXL="4"
+        columnsL="1"
+        columnsM="1"
+        singleContainerFullSize="false"
+    >
+        <f:content>
+            <Label text="Order ID" />
+            <Text text="{FormDetailsModel>/orderID}" />
+
+            <Label text="Order Date" />
+            <Text text="{FormDetailsModel>/orderDate}" />
+
+            <Label text="Total Order Value" />
+            <Text text="{FormDetailsModel>/amount}" />
+
+            <Label text="Status" />
+            <ObjectStatus
+                text="{ path: 'FormDetailsModel>/status', formatter: '.formatter.statusTextFormatter' }"
+                state="{ path: 'FormDetailsModel>/status', formatter: '.formatter.statusStateFormatter' }"
+                icon="{ path: 'FormDetailsModel>/status', formatter: '.formatter.statusIconFormatter' }"
+                inverted="true"
+            />
+        </f:content>
+    </f:SimpleForm>
+</core:FragmentDefinition>

@@ -1,0 +1,97 @@
+{
+  "currentPage": 0,
+  "totalItems": 15,
+  "totalPages": 2,
+  "items": [
+    {
+      "_id": "df0c4679-094f-4715-91f2-51cff4c09c44",
+      "orderID": "O3729162",
+      "orderDate": "2024-08-19",
+      "customerName": "Jhon Doe",
+      "totalQuantity": 12,
+      "amount": 381.3,
+      "status": "Pending"
+    },
+    {
+      "_id": "22341700-45ce-4dd4-9dac-4045160b006c",
+      "orderID": "O2984804",
+      "orderDate": "2024-04-23",
+      "customerName": "Mike Smith",
+      "totalQuantity": 6,
+      "amount": 309.24,
+      "status": "Shipped"
+    },
+    {
+      "_id": "3743ce75-4006-44fa-860a-bcc9781809bf",
+      "orderID": "O1974472",
+      "orderDate": "2024-04-01",
+      "customerName": "Laura Hills",
+      "totalQuantity": 5,
+      "amount": 68.16,
+      "status": "Shipped"
+    },
+    {
+      "_id": "94465685-213f-41c0-85f9-b035a3b9530d",
+      "orderID": "O6515840",
+      "orderDate": "2024-06-26",
+      "customerName": "Maria Silva",
+      "totalQuantity": 1,
+      "amount": 344.43,
+      "status": "Processing"
+    },
+    {
+      "_id": "bfc81090-814c-4639-bc8c-1e499a3d8aa4",
+      "orderID": "O8335975",
+      "orderDate": "2024-03-02",
+      "customerName": "João de Abreu",
+      "totalQuantity": 15,
+      "amount": 230.02,
+      "status": "Pending"
+    },
+    {
+      "_id": "df47f602-94a1-41fc-bd1b-a717de667871",
+      "orderID": "O5509554",
+      "orderDate": "2024-12-12",
+      "customerName": "Liz Braga",
+      "totalQuantity": 3,
+      "amount": 218.23,
+      "status": "Processing"
+    },
+    {
+      "_id": "d5f42ab3-0bcf-430a-962f-807431eadad8",
+      "orderID": "O0559372",
+      "orderDate": "2024-07-25",
+      "customerName": "Natália Alves",
+      "totalQuantity": 8,
+      "amount": 387.5,
+      "status": "Processing"
+    },
+    {
+      "_id": "c7ec5395-07e5-44e4-902a-3d3cc4fd86d9",
+      "orderID": "O3021141",
+      "orderDate": "2024-10-10",
+      "customerName": "Marcos A. Nunes",
+      "totalQuantity": 16,
+      "amount": 124.55,
+      "status": "Delivered"
+    },
+    {
+      "_id": "2ae5e79c-9713-48c8-b652-0faaa6cd4dc6",
+      "orderID": "O5239424",
+      "orderDate": "2024-08-21",
+      "customerName": "Juan Gomes",
+      "totalQuantity": 20,
+      "amount": 378.32,
+      "status": "Shipped"
+    },
+    {
+      "_id": "02ec74fd-0dbe-4bbb-a47d-7bd6a900acf4",
+      "orderID": "O7851791",
+      "orderDate": "2024-04-17",
+      "customerName": "Flavia Araujo",
+      "totalQuantity": 9,
+      "amount": 47.53,
+      "status": "Canceled"
+    }
+  ]
+}

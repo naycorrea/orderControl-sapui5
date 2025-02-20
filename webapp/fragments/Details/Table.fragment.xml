@@ -1,0 +1,56 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Table
+        id="idDetailsTable"
+        class="sapUiLargeMarginTop"
+        items="{reportDetailsModel>/items}"
+    >
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <Title
+                        text="{i18n>OrderDetailsTableTitle} ({reportDetailsModel>/totalItems})"
+                        level="H2"
+                    />
+                    <ToolbarSpacer />
+                    <Button
+                        id="idOrderDetailsExportButton"
+                        text=""
+                        icon="sap-icon://excel-attachment"
+                        type="Emphasized"
+                    />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="Product" />
+            </Column>
+            <Column>
+                <Text text="Unit Price" />
+            </Column>
+            <Column>
+                <Text text="Quantity" />
+            </Column>
+            <Column>
+                <Text text="Discount" />
+            </Column>
+            <Column>
+                <Text text="Price" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Text text="{reportDetailsModel>productName}" />
+                    <Text text="{reportDetailsModel>unitPrice}" />
+                    <Text text="{reportDetailsModel>quantity}" />
+                    <Text text="{reportDetailsModel>discount}" />
+                    <Text text="{reportDetailsModel>amount}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

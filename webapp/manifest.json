@@ -57,6 +57,27 @@
         "settings": {
           "bundleName": "sapui5.project.i18n.i18n"
         }
+      },
+      "orderStatusModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/orderStatus.json",
+        "settings": {
+          "defaultBindingMode": "OneWay"
+        }
+      },
+      "filterModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/filter.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
+      "reportTableModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/reportTable.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
       }
     },
     "resources": {

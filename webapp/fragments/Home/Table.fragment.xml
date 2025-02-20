@@ -1,0 +1,85 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Table
+        id="idOrdersTable"
+        class="sapUiLargeMarginTop"
+        items="{reportTableModel>/items}"
+    >
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <Title
+                        text="{i18n>OrderTableTitle} ({reportTableModel>/totalItems})"
+                        level="H2"
+                    />
+                    <ToolbarSpacer />
+                    <Button
+                        id="idAddButton"
+                        text="Create"
+                        type="Emphasized"
+                    />
+                    <Button
+                        id="idExportButton"
+                        text=""
+                        icon="sap-icon://excel-attachment"
+                        type="Emphasized"
+                    />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="Customer Name" />
+            </Column>
+            <Column>
+                <Text text="Order ID" />
+            </Column>
+            <Column>
+                <Text text="Order Date" />
+            </Column>
+            <Column>
+                <Text text="Quantity" />
+            </Column>
+            <Column>
+                <Text text="Amount" />
+            </Column>
+            <Column>
+                <Text text="Status" />
+            </Column>
+            <Column>
+                <Text text="" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Text text="{reportTableModel>customerName}" />
+                    <Text text="{reportTableModel>orderID}" />
+                    <Text text="{reportTableModel>orderDate}" />
+                    <Text text="{reportTableModel>totalQuantity}" />
+                    <ObjectNumber
+                        number="{ path: 'reportTableModel>amount',
+							type: 'sap.ui.model.type.Float',
+							formatOptions: {
+								minFractionDigits: 2,
+								maxFractionDigits: 2
+							}
+						}"
+                        unit="BRL"
+                    />
+                    <ObjectStatus
+                        text="{ path: 'reportTableModel>status', formatter: '.formatter.statusTextFormatter' }"
+                        state="{ path: 'reportTableModel>status', formatter: '.formatter.statusStateFormatter' }"
+                        icon="{ path: 'reportTableModel>status', formatter: '.formatter.statusIconFormatter' }"
+                        inverted="true"
+                    />
+                    <core:Fragment
+                        fragmentName='sapui5.project.fragments.Home.Actions'
+                    />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

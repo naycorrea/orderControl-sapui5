@@ -1,9 +1,7 @@
 <mvc:View
     controllerName="sapui5.project.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
     xmlns="sap.m"
-    xmlns:fb="sap.ui.comp.filterbar"
     xmlns:core="sap.ui.core"
 >
     <Page
@@ -12,148 +10,15 @@
         class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer"
     >
         <content>
-            <fb:FilterBar
-                search="onSearch"
-                clear="onClear"
-                showClearOnFB="true"
-                useToolbar="false"
-                showFilterConfiguration="false"
-            >
-                <fb:filterGroupItems>
-                    <fb:FilterGroupItem
-                        groupName="__$INTERNAL$"
-                        name="orderDateName"
-                        label="Order Date"
-                        partOfCurrentVariant="true"
-                        visibleInFilterBar="true"
-                    >
-                        <fb:control>
-                            <DateRangeSelection id="idOrderDate" />
-                        </fb:control>
-                    </fb:FilterGroupItem>
+            <core:Fragment
+                fragmentName='sapui5.project.fragments.Home.FilterBar'
+            />
 
-                    <fb:FilterGroupItem
-                        groupName="__$INTERNAL$"
-                        name="orderIDName"
-                        label="Order ID"
-                        partOfCurrentVariant="true"
-                        visibleInFilterBar="true"
-                    >
-                        <fb:control>
-                            <Input id="idOrderId" />
-                        </fb:control>
-                    </fb:FilterGroupItem>
+            <core:Fragment fragmentName='sapui5.project.fragments.Home.Table' />
 
-                    <fb:FilterGroupItem
-                        groupName="__$INTERNAL$"
-                        name="statusName"
-                        label="Status"
-                        partOfCurrentVariant="true"
-                        visibleInFilterBar="true"
-                    >
-                        <fb:control>
-                            <MultiComboBox>
-                                <items>
-                                    <core:Item text="Aguardando" />
-                                    <core:Item text="Em andamento" />
-                                    <core:Item text="Finalizado" />
-                                    <core:Item text="Cancelado" />
-                                </items>
-                            </MultiComboBox>
-                        </fb:control>
-                    </fb:FilterGroupItem>
-                </fb:filterGroupItems>
-            </fb:FilterBar>
-
-            <Table
-                id="idOrdersTable"
-                class="sapUiLargeMarginTop"
-            >
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <content>
-                            <Title
-                                text="Report"
-                                level="H2"
-                            />
-                            <ToolbarSpacer />
-                            <Button
-                                id="idAddButton"
-                                text="Add"
-                                type="Emphasized"
-                            />
-                            <Button
-                                id="idUpdateButton"
-                                text="Update"
-                                type="Emphasized"
-                                press=".onPress"
-                            />
-                            <Button
-                                id="idDeleteButton"
-                                text="Delete"
-                                type="Emphasized"
-                            />
-                            <Button
-                                id="idExportButton"
-                                text=""
-                                icon="sap-icon://excel-attachment"
-                                type="Emphasized"
-                            />
-                        </content>
-                    </OverflowToolbar>
-                </headerToolbar>
-                <columns>
-                    <Column>
-                        <Text text="Order ID" />
-                    </Column>
-                    <Column>
-                        <Text text="Order Date" />
-                    </Column>
-                    <Column>
-                        <Text text="Employee" />
-                    </Column>
-                    <Column>
-                        <Text text="Customer" />
-                    </Column>
-                    <Column>
-                        <Text text="Quantity" />
-                    </Column>
-                    <Column>
-                        <Text text="Price" />
-                    </Column>
-                    <Column>
-                        <Text text="Details" />
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem vAlign="Middle">
-                        <cells>
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Button
-                                text="Details"
-                                press=".onPress"
-                            />
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-            <Toolbar>
-                <ToolbarSpacer />
-                <content>
-                    <Button icon="sap-icon://navigation-left-arrow" />
-                    <Input
-                        width="50px"
-                        value="0"
-                    />
-                    <Text text="of 0" />
-                    <Button icon="sap-icon://navigation-right-arrow" />
-                </content>
-            </Toolbar>
+            <core:Fragment
+                fragmentName='sapui5.project.fragments.Home.Pagination'
+            />
         </content>
     </Page>
 </mvc:View>

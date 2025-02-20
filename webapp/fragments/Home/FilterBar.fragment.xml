@@ -1,0 +1,68 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+>
+    <fb:FilterBar
+        search="onSearch"
+        clear="onClear"
+        showClearOnFB="true"
+        useToolbar="false"
+        showFilterConfiguration="false"
+    >
+        <fb:filterGroupItems>
+            <fb:FilterGroupItem
+                groupName="__$INTERNAL$"
+                name="orderDateName"
+                label="Order Date"
+                partOfCurrentVariant="true"
+                visibleInFilterBar="true"
+                mandatory="true"
+            >
+                <fb:control>
+                    <DateRangeSelection
+                        id="idOrderDate"
+                        dateValue="{filterModel>/initialDate}"
+                        secondDateValue="{filterModel>/finalDate}"
+                    />
+                </fb:control>
+            </fb:FilterGroupItem>
+
+            <fb:FilterGroupItem
+                groupName="__$INTERNAL$"
+                name="orderIDName"
+                label="Order ID"
+                partOfCurrentVariant="true"
+                visibleInFilterBar="true"
+            >
+                <fb:control>
+                    <Input
+                        id="idOrderId"
+                        value="{filterModel>/orderId}"
+                    />
+                </fb:control>
+            </fb:FilterGroupItem>
+
+            <fb:FilterGroupItem
+                groupName="__$INTERNAL$"
+                name="statusName"
+                label="Status"
+                partOfCurrentVariant="true"
+                visibleInFilterBar="true"
+            >
+                <fb:control>
+                    <MultiComboBox
+                        id="idStatus"
+                        items="{orderStatusModel>/items}"
+                        selectedKeys="{filterModel>/status}"
+                    >
+                        <core:Item
+                            key="{orderStatusModel>key}"
+                            text="{orderStatusModel>status}"
+                        />
+                    </MultiComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

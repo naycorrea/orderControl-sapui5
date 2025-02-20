@@ -1,9 +1,7 @@
 <mvc:View
     controllerName="sapui5.project.controller.Details"
     xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
     xmlns="sap.m"
-    xmlns:fb="sap.ui.comp.filterbar"
     xmlns:core="sap.ui.core"
 >
     <Page
@@ -14,68 +12,17 @@
         navButtonPress=".navBack"
     >
         <content>
-            <Table
-                id="idDetailsTable"
-                class="sapUiLargeMarginTop"
-            >
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <content>
-                            <Title
-                                text="Order Details"
-                                level="H2"
-                            />
-                            <ToolbarSpacer />
-                            <Button
-                                id="idOrderDetailsExportButton"
-                                text=""
-                                icon="sap-icon://excel-attachment"
-                                type="Emphasized"
-                            />
-                        </content>
-                    </OverflowToolbar>
-                </headerToolbar>
-                <columns>
-                    <Column>
-                        <Text text="Product" />
-                    </Column>
-                    <Column>
-                        <Text text="Unit Price" />
-                    </Column>
-                    <Column>
-                        <Text text="Quantity" />
-                    </Column>
-                    <Column>
-                        <Text text="Discount" />
-                    </Column>
-                    <Column>
-                        <Text text="Price" />
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem vAlign="Middle">
-                        <cells>
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                            <Text text="{SupplierName}" />
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-            <Toolbar>
-                <ToolbarSpacer />
-                <content>
-                    <Button icon="sap-icon://navigation-left-arrow" />
-                    <Input
-                        width="50px"
-                        value="0"
-                    />
-                    <Text text="of 0" />
-                    <Button icon="sap-icon://navigation-right-arrow" />
-                </content>
-            </Toolbar>
+            <core:Fragment
+                fragmentName='sapui5.project.fragments.Details.Form'
+            />
+
+            <core:Fragment
+                fragmentName='sapui5.project.fragments.Details.Table'
+            />
+
+            <core:Fragment
+                fragmentName='sapui5.project.fragments.Details.Pagination'
+            />
         </content>
     </Page>
 </mvc:View>
